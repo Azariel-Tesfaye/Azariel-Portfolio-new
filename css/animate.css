@@ -1,24 +1,23 @@
-
-.button__container{
+.button__container {
     display: flex;
     flex-direction: column;
 }
 
-.button__box{
+.button__box {
     border: none;
     border-radius: 30px;
-    height:55px;
+    height: 55px;
     width: 160px;
     background: #252525;
     box-shadow: 0 0 10px rgb(77, 77, 77);
     transition: transform .2s linear;
 }
 
-.button__box:not(:last-child){
+.button__box:not(:last-child) {
     margin-bottom: 3rem;
 }
 
-.button__box span{
+.button__box span {
     display: block;
     color: #fff;
     font-size: 20px;
@@ -28,7 +27,7 @@
     transition: transform .2s linear;
 }
 
-.pointer{
+.pointer {
     position: absolute;
     width: 8px;
     height: 8px;
@@ -41,9 +40,30 @@
     transition-delay: 0;
 }
 
-.pointer.buttonHover{
+.pointer.buttonHover {
     transition: .2s ease;
     transform: scale(6);
     background: #fff;
     opacity: .2;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .button__box {
+        height: 45px;
+        width: 140px;
+    }
+    .button__box span {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .button__box {
+        height: 40px;
+        width: 120px;
+    }
+    .button__box span {
+        font-size: 16px;
+    }
 }
